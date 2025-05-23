@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
+import { currentUser } from '@clerk/nextjs/server';
 
-export default function Home() {
-  return (
-    <p>
-     This is home
-    </p>
-  );
+export default async function DashboardPage() {
+  const user = await currentUser();
+
+  return <div>Welcome</div>;
 }
